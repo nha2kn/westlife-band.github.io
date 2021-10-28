@@ -440,7 +440,7 @@ html {
 .modal-header {
   background-color: #009688;
   color: #fff;
-  width: 56.25em;
+  width: 30em;
   height: 7.625em;
   letter-spacing: 0.25em;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -460,7 +460,7 @@ html {
 }
 
 .modal-input {
-  width: 53em;
+  width: 65em;
   padding: 0.5em 1em 0.25em 1em;
   border: 0.0625em solid #ccc;
 }
@@ -469,6 +469,7 @@ html {
   background: #fff;
   display: inline-block;
   padding: 0 1em;
+  width: 56.25em;
 }
 
 .modal-container {
@@ -502,6 +503,7 @@ html {
   width: 53em;
   padding: 1.25em 1em 1.875em 1em;
   margin: 1em 0;
+  
   cursor: pointer;
   border: none;
 }

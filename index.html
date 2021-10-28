@@ -175,25 +175,25 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-sub">Fri 27 Nov 2016</p>
                             <p class="place-sub2">New York, commonly referred to as New York City for purposes of distinguishing it from the state of New York, is the most populous city in the United States.</p>
-                            <a href='' class="btn s-full-width js-buy-ticket">Buy Tickets</a>
+                            <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="col col-thrid s-col-full mt-16">
-                        <img src="/assets/img/cali.jpeg" class="place-image">
+                        <img src="./assets/img/cali.jpeg" class="place-image">
                         <div class="place-body">
                             <h3 class="place-heading">Califonia</h3>
                             <p class="place-sub">Fri 27 Nov 2016</p>
                             <p class="place-sub2">California, also known as Cali for short by the Vietnamese, is a state on the west coast of the United States. With a population of 38 million people and an area of 410,000 km²</p>
-                            <a href='' class="btn s-full-width js-buy-ticket">Buy Tickets</a>
+                            <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="col col-thrid s-col-full mt-16">
-                        <img src="/assets/img/las.jpg" class="place-image">
+                        <img src="./assets/img/las.jpg" class="place-image">
                         <div class="place-body">
                             <h3 class="place-heading">Las Vegas</h3>
                             <p class="place-sub">Fri 27 Nov 2016</p>
                             <p class="place-sub2">Las Vegas; Nevada is the most populous city in the state of Nevada, the capital of Clark County, and a world-renowned resort, gambling and dining destination.</p>
-                            <a href='' class="btn s-full-width js-buy-ticket">Buy Tickets</a>
+                            <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -287,67 +287,6 @@
         </div>
     </div>
 
-    <!-- Open, Close mobile menu -->
-    <script>
-        var header = document.getElementById('header');
-        var mobileMenu = document.getElementById('mobile-menu');
-        var headerHeight = header.clientHeight;
-
-        // Open,closed
-        mobileMenu.onclick = () =>{
-            var isClosed = header.clientHeight === headerHeight;
-            if(isClosed) {
-                header.style.height = 'auto';
-            } else{
-                header.style.height = null;
-            }
-        }
-
-        // auto close menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for(var i=0; i < menuItems.length;i++){
-            var menuItem = menuItems[i];
-
-            menuItem.onclick = function(event) {
-                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-                if(isParentMenu){
-                    event.preventDefault();
-                    // event.preventDefalut();
-                } else{
-                    header.style.height = null;
-                }
-            }
-        }
-    </script>
-
-    <!-- Buy Tickets -->
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket');
-        const modal = document.querySelector('.js-modal');
-        const modalContainer = document.querySelector('.js-modal-container');
-        const modalClose = document.querySelector('.js-modal-close');
-
-        // Func show buy tickets (add class open to modal)
-        showBuyTickets = () =>{
-            modal.classList.add('open');
-        }
-
-        // Func show buy tickets (add class open to modal)
-        hideBuyTickets = () =>{
-            modal.classList.remove('open');
-        }
-
-        for(const buyBtn of buyBtns){
-            buyBtn.addEventListener('click', showBuyTickets);
-        }
-
-        modalClose.addEventListener('click',hideBuyTickets);
-
-        modal.addEventListener('click',hideBuyTickets);
-
-        modalContainer.addEventListener('click',(event) => {
-            event.stopPropagation();
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
